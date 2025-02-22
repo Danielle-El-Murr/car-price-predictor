@@ -1,7 +1,7 @@
 # 🚗 Car Price Prediction using Linear Regression  
 
 ## 📌 Overview  
-This project is all about predicting car prices based on different factors like the **car's brand, mileage, year, engine size, fuel type, and transmission type**. The goal is to build a model that can estimate car prices accurately using **Linear Regression**.  
+This project is all about predicting car prices based on different factors like the **car's brand, mileage, year, engine size, and fuel type**. The goal is to build a model that can estimate car prices accurately using **Linear Regression**.  
 
 I worked on this project while going through a **Udemy machine learning course**, but I didn’t just follow along—I made sure to **understand every step, tweak things, and test different ideas**. I focused on **data preprocessing, feature selection, and checking OLS assumptions** to make sure the model performs well.  
 
@@ -10,11 +10,11 @@ This project helped me **strengthen my understanding of regression models**, fea
 ---
 
 ## 📊 Dataset  
-- **Source**: [Dataset Link (if applicable)]  
-- **Number of records:** [Add count]  
+- **Source**: cars.csv 
+- **Number of records:** 4345  
 - **Features Used:**  
   - **Numerical:** Year, Mileage, Engine Size, Price  
-  - **Categorical:** Brand, Fuel Type, Transmission  
+  - **Categorical:** Brand, Body, Engine Type, Registration, and Model
 - **Goal:** Train a model to predict car prices based on available features.  
 
 ---
@@ -40,23 +40,17 @@ This project helped me **strengthen my understanding of regression models**, fea
    - **Homoscedasticity** – Made sure the variance of residuals was consistent.  
    - **Multicollinearity** – Checked if any independent variables were highly correlated and might mess with the model.  
 
-4️⃣ **Handling Categorical Data** – Since ML models can’t process text, I converted categorical features like **Brand, Fuel Type, and Transmission** into **dummy variables** using one-hot encoding.  
+4️⃣ **Handling Categorical Data** – Since ML models can’t process text, I converted categorical features like **Brand, Engine Type, and Body** into **dummy variables**.  
 
 5️⃣ **Building & Evaluating the Model** – Finally, I trained a **Linear Regression model** using Scikit-Learn and evaluated it using:  
    - **R² Score** – Measures how well the model explains variance in price.  
-   - **Mean Absolute Error (MAE) & Mean Squared Error (MSE)** – Show how far the predictions are from actual prices.  
    - **Residual Analysis** – Checked how well the model fits by analyzing the prediction errors.  
 
 ---
 
-## 📈 Results & Model Performance  
-- **R² Score:** X% (How much of the price variability the model explains)  
-- **Mean Absolute Error (MAE):** Y (How far off, on average, the model is)  
-- **Mean Squared Error (MSE):** Z (Penalty for large errors)  
-
 Overall, the model performed **decently well**, but there were some challenges:  
-✅ It worked well for **popular brands and newer cars**.  
-⚠️ It struggled with **rare brands and outliers**.  
+✅ It worked well for **popular brands, expensive cars and newer cars**.  
+⚠️ It struggled with **cheaper cars and outliers**.  
 
 ---
 
@@ -64,8 +58,7 @@ Overall, the model performed **decently well**, but there were some challenges:
 While the Linear Regression model worked okay, I want to:  
 - **Test different models** like **Polynomial Regression, Decision Trees, and Random Forests** to compare results.  
 - **Tune hyperparameters** to see if I can improve predictions.  
-- **Add more features** like car color, location, or previous owners to improve predictions.  
-- **Deploy the model** using **Flask or Streamlit** so anyone can enter car details and get a price estimate.  
+- **Add more features** like car model, damage, location, or previous owners to improve predictions. 
 
 ---
 
